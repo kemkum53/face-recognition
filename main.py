@@ -1,3 +1,7 @@
+###                               ###
+#   201713709012 - Kemal Kondakçı   #
+#  201713709015 - Mustafa Ali Eren  #
+###                               ###
 # face_recognition ve opencv kütüphanelerini import ederek başlıyoruz
 import face_recognition
 import cv2
@@ -34,6 +38,9 @@ while True:
     # Videodan anlık bir kare yakalıyoruz
     ret, frame = video_capture.read()
     frame = cv2.flip(frame, 1)
+
+    #frame = cv2.imread('deneme2.jpeg')
+    #frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5)
     
     # Aldığımız kareyi 1/4 oranında küçültüyoruz ve bu daha hızlı sonuç vermeyi sağlıyor
     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
